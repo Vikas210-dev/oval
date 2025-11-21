@@ -1,0 +1,500 @@
+.profile-page {
+  width: 393px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #fffff5 0%, #f7f9cd 100%);
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 120px; /* space for bottom nav */
+}
+
+/* Mobile landscape orientation */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .profile-page {
+    width: 100vw !important;
+    margin: 0 !important;
+    padding: 10px !important;
+    padding-bottom: 60px !important;
+    overflow-y: auto;
+    box-sizing: border-box;
+    min-height: 100vh;
+  }
+  
+  .profile-hero {
+    height: auto !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .profile-title {
+    font-size: 20px !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .user-pill {
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+  }
+  
+  .profile-big-card {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 10px 0 !important;
+    padding: 15px !important;
+  }
+  
+  .sub-row {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  
+  .stats-row {
+    justify-content: space-around !important;
+    gap: 20px !important;
+  }
+  
+  .header-top {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    margin-bottom: 10px;
+  }
+  
+  .logo-badge {
+    position: relative !important;
+    right: auto !important;
+    top: auto !important;
+    margin-bottom: 10px;
+  }
+}
+
+.header-top {
+  position: absolute;
+  left: 20px;
+  top: 14px;
+}
+.menu-icon {
+  width: 28px;
+  height: 25px;
+}
+.logo-badge {
+  position: absolute;
+  right: 18px;
+  top: 10px;
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-badge img {
+  /* margin-top: 5px; */
+  width: 58px;
+  height: 56px;
+}
+
+.profile-main {
+  padding: 60px 18px 24px;
+}
+
+/* Hero banner section */
+.profile-hero {
+  position: relative;
+  height: 120px; /* reduced hero container height */
+  margin-bottom: 35px; /* further reduced space below for tighter layout */
+}
+.profile-title {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 26px;
+  font-weight: 500;
+  color: #0a1930;
+  width: 334px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-banner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20px;
+  height: 96px;
+}
+.user-pill {
+  position: absolute;
+  left: 5px;
+  right: 26px;
+  top: 45px; /* moved up to sit closer to title */
+  height: 84px;
+  width: 340px;
+
+  background: linear-gradient(90deg, #0f2e44 0%, #0f7a79 100%);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 18px;
+  /* width is defined by left/right; remove fixed width/height duplicates */
+}
+.user-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #1f4155;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+.user-pill .user-name {
+  color: #ffffff;
+  font-weight: 700;
+}
+.user-pill .user-email {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 12px 30px rgba(3, 39, 34, 0.06);
+  margin-bottom: 14px;
+}
+.profile-big-card.card {
+  width: 340px;
+  height: 795px;
+  margin: 0 auto 14px;
+  padding: 16px;
+  border-radius: 24px;
+}
+.divider {
+  height: 2px;
+  background: #169093;
+  margin: 16px 0;
+  opacity: 0.18;
+}
+/* .divider.soft {
+  opacity: 0.12;
+  margin: 12px 0;
+} */
+.user-name {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+}
+.user-email {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.subscription .sub-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.sub-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.sub-title-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 293px;
+  height: 18px;
+}
+.sub-icon {
+  width: 15px;
+  height: 15px;
+}
+.sub-title {
+  font-weight: 500;
+  color: #000000;
+  width: 118px;
+  height: 18px;
+  font-size: 14px;
+}
+.sub-plan {
+  font-size: 13px;
+  color: #6b7a7a;
+}
+.sub-pill-wrap {
+  display: flex;
+  gap: 8px;
+}
+.sub-pill {
+  background: #0a1930;
+  color: #fff;
+  padding: 1px 10px 0px;
+  border-radius: 30px;
+  font-weight: 400;
+  width: 60px;
+  height: 18px;
+  font-size: 10px;
+}
+.sub-pill.outline {
+  background: #169093;
+  color: #fff;
+  border: none;
+}
+.sub-meta {
+  display: flex;
+  gap: 18px;
+  margin-top: 12px;
+}
+.stats-row {
+  margin: 10px 0 -10px;
+  background: #fbfdf8;
+  border-radius: 16px;
+  padding: 5px 10px;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  align-items: center;
+}
+.v-sep {
+  width: 1px;
+  height: 58px;
+  background: rgba(3, 39, 34, 0.12);
+  justify-self: center;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #083737;
+}
+.icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #e9f6f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-badge img {
+  width: 24px;
+  height: 24px;
+}
+.stat-num {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0b3d38;
+}
+.stat-label {
+  font-size: 12px;
+  color: #6b7a7a;
+  text-align: center;
+}
+.meta-item {
+  text-align: center;
+}
+.meta-num {
+  font-weight: 700;
+  color: #083737;
+}
+.meta-label {
+  font-size: 12px;
+  color: #6b7a7a;
+}
+
+/* Start Plan box */
+.start-plan {
+  background: #f4f7e9;
+  border-radius: 16px;
+  padding: 12px;
+  margin: 2px 0 12px;
+}
+.start-plan .plan-title {
+  font-weight: 500;
+  font-size: 14px;
+  color: #000000;
+}
+.start-plan .plan-sub {
+  font-size: 12px;
+  color: #6b7a7a;
+  margin-top: 2px;
+}
+.renewal-box {
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  box-shadow: inset 0 0 0 1px rgba(3, 39, 34, 0.06);
+}
+.renewal-item {
+  display: flex;
+  flex-direction: column;
+}
+.renewal-label {
+  font-size: 11px;
+  color: #000000;
+}
+.renewal-date {
+  font-size: 11px;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* Progress styles aligned with Courses */
+.progress-wrap {
+  background: #f2f7ec;
+  border-radius: 20px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: -10px;
+  margin-bottom: -2px;
+}
+.progress-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.progress-label {
+  font-size: 12px;
+  color: #083737;
+  font-weight: 600;
+}
+.progress-count {
+  font-size: 12px;
+  color: #6b7a7a;
+}
+.progress-track {
+  background: #0a1930;
+  border-radius: 999px;
+  height: 10px;
+  width: 257px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.progress-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* height: 100%; */
+  height: 10px;
+  background: linear-gradient(90deg, #22b6b0 0%, #169093 100%);
+  border-radius: 999px;
+}
+/* .progress-note {
+  font-size: 11px;
+  color: #6b7a7a;
+  margin-top: 6px;
+} */
+.streak-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fbfdf8;
+  border-radius: 16px;
+  padding: 10px 12px;
+  margin: 12px 0;
+  box-shadow: inset 0 0 0 1px rgba(3, 39, 34, 0.06);
+}
+.streak-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #0b3d38;
+}
+.streak-icon {
+  width: 20px;
+  height: 20px;
+}
+.streak-num {
+  font-weight: 800;
+}
+.streak-label {
+  font-size: 12px;
+  color: #6b7a7a;
+}
+.streak-ind {
+  width: 4px;
+  height: 16px;
+  border-radius: 3px;
+  background: #2ecc71;
+}
+.manage-sub {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  margin: 12px 0;
+  padding: 12px 0;
+  background: linear-gradient(90deg, #22b6b0 0%, #303d50 100%);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-weight: 600;
+}
+
+.plan-includes h4 {
+  margin: 0px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b4b4b;
+}
+.plan-includes ul {
+  margin: 8px 0 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  row-gap: 10px;
+}
+.plan-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #4b4b4b;
+  font-weight: 300;
+}
+.plan-item img {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 420px) {
+  .profile-page {
+    transform-origin: top left;
+  }
+}
+
+/* Desktop-only: position the logo inside the centered card (absolute) so it scrolls
+   with the content instead of sticking to the viewport. Mobile rules are unchanged. */
+@media (min-width: 951px) {
+  /* stronger selector to beat compiled/asset CSS that may use !important
+     keep changes desktop-only and inside this page file */
+  .profile-page.profile-page .logo-badge {
+    position: absolute !important;
+    top: 10px;
+    right: -150px ; /* match mobile card offset */
+    width: 36px ;
+    height: 36px ;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 1100 !important;
+  }
+
+  /* .profile-page.profile-page .logo-badge img {
+    width: 25px;
+    height: 28px ;
+  } */
+}

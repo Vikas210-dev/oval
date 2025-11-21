@@ -1,0 +1,131 @@
+.login-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  max-width: none;
+  background: #fffff4;
+  border-radius: 30px;
+  padding: 40px 18px 40px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  box-sizing: border-box;
+  z-index: 10;
+  opacity: 100%;
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+/* Mobile portrait orientation */
+
+
+/* Mobile landscape orientation */
+
+
+.login-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+}
+
+.login-title {
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500;
+  margin: 0;
+  width: 152px;
+  height: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-inner {
+  /* responsive design box: allow flexible sizing */
+  width: 100%;
+  max-width: 236px;
+  height: auto;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.phone-row {
+  width: 236px;
+  height: 40px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.country-pill {
+  border: 2px solid #23979e;
+  font-size: 16px;
+  background: #303d50;
+  color: #fff;
+  padding: 0 12px; /* horizontal padding only so height remains 40px */
+  border-radius: 10px;
+  width: 77px;
+  flex: 0 0 77px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.phone-input {
+  width: calc(236px - 77px - 12px);
+  font-size: 16px;
+  flex: 0 0 auto;
+  padding: 0 12px; /* horizontal padding only */
+  height: 40px;
+  line-height: 40px; /* ensure text is vertically centered */
+  border-radius: 10px;
+  border: 2px solid #23979e;
+  background: #303d50;
+  color: #fff;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.login-btn {
+  font-size: 18px;
+  width: 180px;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 200px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(90deg, #23979e, #303d50);
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-illustration {
+  width: 250px;
+  max-width: 250px;
+  margin: 20px auto;
+  border-radius: 8px;
+  display: block;
+}
+

@@ -1,0 +1,213 @@
+.otp-wrapper {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;   /* vertical center */
+  justify-content: center; /* horizontal center */
+  background: #fafaf2;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* Default card (portrait mobile) */
+.otp-card {
+  width: 323px;
+  min-height: 600px;
+  background: #fffff4;
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  transform: scale(var(--scale, 1));
+  margin-bottom: 70px;
+}
+
+.otp-main {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 18px 20px 70px;
+  box-sizing: border-box;
+}
+
+/* Back button */
+.otp-back {
+  align-self: flex-start;
+  color: #23979e;
+  font-size: 18px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.otp-back img {
+  width: 21px;
+  height: 18.5px;
+  display: block;
+}
+
+/* Title */
+.otp-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0d6665;
+  margin: 12px 0;
+  text-align: center;
+}
+
+/* Content text */
+.otp-content {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 6px;
+  max-width: 280px;
+}
+
+.otp-desc {
+  font-size: 15px;
+  color: #2b2b2b;
+  margin-top: 6px;
+  text-align: center;
+}
+
+/* OTP Inputs */
+.otp-inputs {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.otp-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid #dfeeee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.otp-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2b2b2b;
+}
+
+.otp-box input::placeholder {
+  color: #c9dcdc;
+  font-weight: 600;
+}
+
+/* Continue button */
+.otp-continue {
+  width: 160px;
+  height: 40px;
+  background: linear-gradient(90deg, #23979e 0%, #303d50 100%);
+  color: #fff;
+  border-radius: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Illustration */
+.otp-illustration {
+  max-width: 220px;
+  margin-top: 14px;
+}
+
+/* Resend text */
+.otp-resend {
+  font-size: 14px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.timing {
+  font-size: 14px;
+  color: #23979e;
+}
+
+/* 📱 Landscape fix */
+@media screen and (orientation: landscape) and (max-width: 932px) {
+  .otp-wrapper {
+    align-items: flex-start; /* top me card dikhana */
+    padding: 10px;
+  }
+
+  .otp-card {
+    width: 90vw;        /* full width le le */
+    min-height: auto;
+    transform: none;    /* scaling hata de */
+  }
+
+  .otp-main {
+    padding-bottom: 90px; /* continue button ke liye jagah */
+  }
+
+  .otp-illustration {
+    max-width: 140px;
+    margin-top: 10px;
+  }
+
+  .otp-continue {
+    position: absolute;
+    bottom: 20px;   /* card ke andar bottom me */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+  }
+}
+
+/* 💻 Desktop */
+@media screen and (min-width: 951px) {
+  .otp-card {
+    width: 360px;
+    min-height: auto;
+  }
+}
+
+/* Slightly smaller mid-screen */
+@media screen and (min-width: 750px) and (max-width: 950px) {
+  .otp-box {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+  .otp-title {
+    font-size: 18px;
+  }
+  .otp-desc {
+    font-size: 13px;
+  }
+  .otp-continue {
+    width: 180px;
+    height: 40px;
+    font-size: 18px;
+  }
+}

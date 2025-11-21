@@ -1,0 +1,8 @@
+.auth-layout {
+  /* Auth layout styles - minimal wrapper */
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
